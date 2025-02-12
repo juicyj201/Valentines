@@ -1,0 +1,63 @@
+{
+  "frames": {
+    "2.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 69
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 3,
+        "w": 64,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 72
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "1.png": {
+      "frame": {
+        "x": 0,
+        "y": 69,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 8,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 72
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "tileset2.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 64,
+      "h": 133
+    },
+    "scale": 1
+  }
+}
