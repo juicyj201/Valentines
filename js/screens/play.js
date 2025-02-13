@@ -25,13 +25,13 @@ class PlayScreen extends me.Stage {
         }
         me.game.world.addChild(this.HUD);
 
-        // // display if debugPanel is enabled or on mobile
-        // if ((me.plugin.cache.debugPanel && me.plugin.cache.debugPanel.panel.visible) || me.device.touch) {
-        //     if (typeof this.virtualJoypad === "undefined") {
-        //         this.virtualJoypad = new VirtualJoypad();
-        //     }
-        //     me.game.world.addChild(this.virtualJoypad);
-        // }
+        // display if debugPanel is enabled or on mobile
+        if ((me.plugin.cache.debugPanel && me.plugin.cache.debugPanel.panel.visible) || me.device.touch) {
+            if (typeof this.virtualJoypad === "undefined") {
+                this.virtualJoypad = new VirtualJoypad();
+            }
+            me.game.world.addChild(this.virtualJoypad);
+        }
 
         // play some music
         me.audio.playTrack("dst-gameforest");
@@ -45,10 +45,10 @@ class PlayScreen extends me.Stage {
         //remove the HUD from the game world
         me.game.world.removeChild(this.HUD);
 
-        // // remove the joypad if initially added
-        // if (this.virtualJoypad && me.game.world.hasChild(this.virtualJoypad)) {
-        //     me.game.world.removeChild(this.virtualJoypad);
-        // }
+        // remove the joypad if initially added
+        if (this.virtualJoypad && me.game.world.hasChild(this.virtualJoypad)) {
+            me.game.world.removeChild(this.virtualJoypad);
+        }
 
         // stop some music
         me.audio.stopTrack("dst-gameforest");

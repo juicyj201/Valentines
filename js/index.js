@@ -42,15 +42,6 @@ export default function onload() {
         // me.pool.register("FlyEntity", FlyEnemyEntity);
         // me.pool.register("CoinEntity", CoinEntity, true);
 
-
-        console.log("yeah")
-        // load the texture atlas file
-        // this will be used by renderable object later
-        // game.texture = new me.TextureAtlas([
-        //     me.loader.getJSON("texture"),
-        //     me.loader.getImage("texture")
-        // ]);
-
         game.texture = new me.TextureAtlas(
             me.loader.getJSON("texture"),
             me.loader.getImage("texture")
@@ -79,31 +70,6 @@ export default function onload() {
         });
 
         // switch to PLAY state
-        me.state.change(me.state.PLAY,
-            {
-                onResetEvent: function () {
-                    this.frames = [
-                        me.loader.getImage("walk001"),
-                        me.loader.getImage("walk002"),
-                        me.loader.getImage("walk003"),
-                        me.loader.getImage("walk004"),
-                        me.loader.getImage("walk005"),
-                        me.loader.getImage("walk006"),
-                        me.loader.getImage("walk007"),
-                        me.loader.getImage("walk008"),
-                        me.loader.getImage("walk009"),
-                        me.loader.getImage("walk0010"),
-                        me.loader.getImage("walk0011"),
-                        me.loader.getImage("walk0012"),
-                    ];
-                
-                    // Create an instance of the AnimationEntity class
-                    const animationEntity = new PlayerEntity(100, 100, frames, 100); // 100ms frame rate
-                
-                    // Add the animation entity to the game world
-                    me.game.world.addChild(animationEntity, 1);
-                },
-            }   
-        );
+        me.state.change(me.state.PLAY);
     });
 }

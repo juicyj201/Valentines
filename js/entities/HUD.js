@@ -10,7 +10,8 @@ class FSControl extends me.UISpriteElement {
      */
     constructor(x, y) {
         super(x, y, {
-            image: me.loader.getImage("fullscreen")
+            image: game.texture,
+            region : "shadedDark30.png"
         });
         this.setOpacity(0.5);
         this.floating = false;
@@ -52,7 +53,8 @@ class AudioControl extends me.UISpriteElement {
      */
     constructor(x, y) {
         super(x, y, {
-            image: me.loader.getImage("soundOn")// ON by default
+            image: game.texture,
+            region : "shadedDark13.png" // ON by default
         });
         this.setOpacity(0.5);
         this.isMute = false;
@@ -79,13 +81,11 @@ class AudioControl extends me.UISpriteElement {
     onClick(/* event */) {
         if (this.isMute) {
             me.audio.unmuteAll();
-            //this.setRegion(me.loader.getRegion("soundOn"));
-            this.image = me.loader.getImage("soundOn");
+            this.setRegion(game.texture.getRegion("shadedDark13.png"));
             this.isMute = false;
         } else {
             me.audio.muteAll();
-            //this.setRegion(me.loader.getRegion("soundOff"));
-            this.image = me.loader.getImage("soundOff");
+            this.setRegion(game.texture.getRegion("shadedDark15.png"));
             this.isMute = true;
         }
         return false;

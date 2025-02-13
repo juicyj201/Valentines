@@ -66,45 +66,43 @@ class PlayerEntity extends me.Entity {
             "walk001.png", "walk002.png", "walk003.png",
             "walk004.png", "walk005.png", "walk006.png",
             "walk007.png", "walk008.png", "walk009.png",
-            "walk0010.png", "walk0011.png", "walk0012.png"
+            "walk0010.png", "walk0011.png", "walk0012.png",
+            "idle001.png", "idle002.png", "idle003.png",
+            "idle004.png", "idle005.png", "idle006.png",
+            "idle007.png"
         ]);
 
         // define a basic walking animatin
-        this.renderable.addAnimation("stand", [{ name: "walk001.png", delay: 100 }]);
-        this.renderable.addAnimation("walk",  [{ name: "walk001.png", delay: 100 }, { name: "walk002.png", delay: 100 }, { name: "walk003.png", delay: 100 }]);
+        this.renderable.addAnimation("stand", [
+            { name: "idle001.png", delay: 50 }, 
+            { name: "idle002.png", delay: 50 }, 
+            { name: "idle003.png", delay: 50 },
+            { name: "idle004.png", delay: 50 },
+            { name: "idle005.png", delay: 50 },
+            { name: "idle006.png", delay: 50 },
+            { name: "idle007.png", delay: 50 }]);
+
+        this.renderable.addAnimation("walk",  [
+            { name: "walk001.png", delay: 50 }, 
+            { name: "walk002.png", delay: 50 }, 
+            { name: "walk003.png", delay: 50 },
+            { name: "walk004.png", delay: 50 },
+            { name: "walk005.png", delay: 50 },
+            { name: "walk006.png", delay: 50 },
+            { name: "walk007.png", delay: 50 },
+            { name: "walk008.png", delay: 50 },
+            { name: "walk009.png", delay: 50 },
+            { name: "walk0010.png", delay: 50 },
+            { name: "walk0011.png", delay: 50 },
+            { name: "walk0012.png", delay: 50 }]);
+            
         this.renderable.addAnimation("jump",  [{ name: "walk004.png", delay: 150 }, { name: "walk005.png", delay: 150 }, { name: "walk006.png", delay: 150 }, { name: "walk002.png", delay: 150 }, { name: "walk001.png", delay: 150 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("walk");
 
         // set the renderable position to bottom center
-        this.anchorPoint.set(0.5, 1.0);
-
-        // // this.frames = [
-        //     me.loader.getImage("walk001"),
-        //     me.loader.getImage("walk002"),
-        //     me.loader.getImage("walk003"),
-        //     me.loader.getImage("walk004"),
-        //     me.loader.getImage("walk005"),
-        //     me.loader.getImage("walk006"),
-        //     me.loader.getImage("walk007"),
-        //     me.loader.getImage("walk008"),
-        //     me.loader.getImage("walk009"),
-        //     me.loader.getImage("walk0010"),
-        //     me.loader.getImage("walk0011"),
-        //     me.loader.getImage("walk0012"),
-        // ];
-
-        // // define a basic walking animatin
-        // //this.renderable.addAnimation("stand", [{ image: frame[0], delay: 100 }]);
-        // this.renderable.addAnimation("stand", [0]);
-        // this.renderable.addAnimation("walk", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
-
-        // // set as default
-        // this.renderable.setCurrentAnimation("stand");
-
-        // // set the renderable position to bottom center
-        // this.anchorPoint.set(0.5, 1.0);    
+        this.anchorPoint.set(0.5, 1.0); 
     }
 
     update (dt) {

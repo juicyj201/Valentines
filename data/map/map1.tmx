@@ -3,7 +3,7 @@
  <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="90" columns="10">
   <image source="../img/tileset.png" width="320" height="306"/>
  </tileset>
- <imagelayer id="4" name="Background" locked="1" offsetx="-288" offsety="-256" parallaxx="0" parallaxy="0">
+ <imagelayer id="4" name="Background" offsetx="-416" offsety="-352" parallaxx="0" parallaxy="0">
   <image source="../img/background.png" trans="627dae" width="576" height="324"/>
   <properties>
    <property name="anchorPoint" value="json:{&quot;x&quot;:0,&quot;y&quot;:1}"/>
