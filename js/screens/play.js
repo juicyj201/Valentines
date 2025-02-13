@@ -15,9 +15,9 @@ class PlayScreen extends me.Stage {
         // reset the score
         game.data.score = 0;
 
-        var background  = new me.Sprite(0, 0, {image: me.loader.getImage("background")});
-        background.anchorPoint.set(0,0);
-        me.game.world.addChild(background, 0);
+        // var background  = new me.Sprite(0, 0, {image: me.loader.getImage("background")});
+        // background.anchorPoint.set(0,0);
+        // me.game.world.addChild(background, 0);
 
         // add our HUD to the game world
         if (typeof this.HUD === "undefined") {
