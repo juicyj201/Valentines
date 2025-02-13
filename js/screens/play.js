@@ -15,10 +15,6 @@ class PlayScreen extends me.Stage {
         // reset the score
         game.data.score = 0;
 
-        // var background  = new me.Sprite(0, 0, {image: me.loader.getImage("background")});
-        // background.anchorPoint.set(0,0);
-        // me.game.world.addChild(background, 0);
-
         // add our HUD to the game world
         if (typeof this.HUD === "undefined") {
             this.HUD = new UIContainer();
@@ -34,7 +30,7 @@ class PlayScreen extends me.Stage {
         }
 
         // play some music
-        me.audio.playTrack("dst-gameforest");
+        me.audio.playTrack("levelsong");
     }
 
     /**
@@ -51,7 +47,7 @@ class PlayScreen extends me.Stage {
         }
 
         // stop some music
-        me.audio.stopTrack("dst-gameforest");
+        me.audio.stopTrack("levelsong");
     }
 };
 

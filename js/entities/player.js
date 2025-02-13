@@ -28,7 +28,7 @@ class PlayerEntity extends me.Entity {
         this.multipleJump = 1;
 
         // set the viewport to follow this renderable on both axis, and enable damping
-        me.game.viewport.follow(this, me.game.viewport.AXIS.BOTH, 0.1);
+        me.game.viewport.follow(this, me.game.viewport.AXIS.BOTH, 0.2);
 
         // enable keyboard
         me.input.bindKey(me.input.KEY.LEFT,  "left");
@@ -96,13 +96,18 @@ class PlayerEntity extends me.Entity {
             { name: "walk0011.png", delay: 50 },
             { name: "walk0012.png", delay: 50 }]);
             
-        this.renderable.addAnimation("jump",  [{ name: "walk004.png", delay: 150 }, { name: "walk005.png", delay: 150 }, { name: "walk006.png", delay: 150 }, { name: "walk002.png", delay: 150 }, { name: "walk001.png", delay: 150 }]);
+        this.renderable.addAnimation("jump",  [
+            { name: "walk004.png", delay: 150 }, 
+            { name: "walk005.png", delay: 150 }, 
+            { name: "walk006.png", delay: 150 }, 
+            { name: "walk002.png", delay: 150 }, 
+            { name: "walk001.png", delay: 150 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("walk");
 
         // set the renderable position to bottom center
-        this.anchorPoint.set(0, 1.0); 
+        this.anchorPoint.set(0.25, 0.5); 
     }
 
     update (dt) {
@@ -140,14 +145,14 @@ class PlayerEntity extends me.Entity {
             }
         }
 
-
-        if (this.body.force.x === 0 && this.body.force.y === 0) {
+        if (this.body.force.x == 0 && this.body.force.y == 0) {
             this.renderable.setCurrentAnimation("stand");
         }
 
         // check if we fell into a hole
         if (!this.inViewport && (this.getBounds().top > me.video.renderer.height)) {
             // if yes reset the game
+            this.dying = true;
             me.game.world.removeChild(this);
             me.game.viewport.fadeIn("#fff", 150, function(){
                 me.audio.play("die", false);
@@ -249,6 +254,7 @@ class PlayerEntity extends me.Entity {
             // flash the screen
             me.game.viewport.fadeIn("#FFFFFF", 75);
             me.audio.play("die", false);
+            this.dying = true;
         }
     }
 }

@@ -13,7 +13,8 @@ import { DebugPanelPlugin } from "debugPlugin";
 export default function onload() {
 
     // init the video
-    if (!me.video.init(800, 600, {parent : "screen", scaleMethod : "flex-width",  renderer : me.video.WEBGL, preferWebGL1 : false, depthTest: "z-buffer", subPixel : false})) {
+    //scaleMethod : "flex-width", depthTest: "z-buffer", subPixel : false, preferWebGL1 : false
+    if (!me.video.init(800, 600, {parent : "screen", scale: "auto", renderer : me.video.WEBGL})) {
         alert("Your browser does not support HTML5 canvas.");
         return;
     }
