@@ -1,6 +1,7 @@
 {
-  "frames": {
-    "walk002.png": {
+  "frames": [
+    {
+      "filename": "walk002.png",
       "frame": {
         "x": 0,
         "y": 0,
@@ -24,7 +25,8 @@
         "y": 0.5
       }
     },
-    "walk008.png": {
+    {
+      "filename": "walk008.png",
       "frame": {
         "x": 32,
         "y": 0,
@@ -48,7 +50,8 @@
         "y": 0.5
       }
     },
-    "walk001.png": {
+    {
+      "filename": "walk001.png",
       "frame": {
         "x": 64,
         "y": 0,
@@ -72,7 +75,8 @@
         "y": 0.5
       }
     },
-    "walk003.png": {
+    {
+      "filename": "walk003.png",
       "frame": {
         "x": 100,
         "y": 0,
@@ -96,7 +100,8 @@
         "y": 0.5
       }
     },
-    "walk007.png": {
+    {
+      "filename": "walk007.png",
       "frame": {
         "x": 129,
         "y": 0,
@@ -120,7 +125,8 @@
         "y": 0.5
       }
     },
-    "walk009.png": {
+    {
+      "filename": "walk009.png",
       "frame": {
         "x": 165,
         "y": 0,
@@ -144,7 +150,8 @@
         "y": 0.5
       }
     },
-    "walk0010.png": {
+    {
+      "filename": "walk0010.png",
       "frame": {
         "x": 194,
         "y": 0,
@@ -168,7 +175,8 @@
         "y": 0.5
       }
     },
-    "walk0011.png": {
+    {
+      "filename": "walk0011.png",
       "frame": {
         "x": 220,
         "y": 0,
@@ -192,7 +200,8 @@
         "y": 0.5
       }
     },
-    "walk0012.png": {
+    {
+      "filename": "walk0012.png",
       "frame": {
         "x": 249,
         "y": 0,
@@ -216,7 +225,8 @@
         "y": 0.5
       }
     },
-    "walk004.png": {
+    {
+      "filename": "walk004.png",
       "frame": {
         "x": 280,
         "y": 0,
@@ -240,7 +250,8 @@
         "y": 0.5
       }
     },
-    "walk005.png": {
+    {
+      "filename": "walk005.png",
       "frame": {
         "x": 308,
         "y": 0,
@@ -264,7 +275,8 @@
         "y": 0.5
       }
     },
-    "walk006.png": {
+    {
+      "filename": "walk006.png",
       "frame": {
         "x": 337,
         "y": 0,
@@ -288,7 +300,7 @@
         "y": 0.5
       }
     }
-  },
+  ],
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",

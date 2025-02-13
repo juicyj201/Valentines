@@ -15,19 +15,23 @@ class PlayScreen extends me.Stage {
         // reset the score
         game.data.score = 0;
 
+        var background  = new me.Sprite(0, 0, {image: me.loader.getImage("background")});
+        background.anchorPoint.set(0,0);
+        me.game.world.addChild(background, 0);
+
         // add our HUD to the game world
         if (typeof this.HUD === "undefined") {
             this.HUD = new UIContainer();
         }
         me.game.world.addChild(this.HUD);
 
-        // display if debugPanel is enabled or on mobile
-        if ((me.plugin.cache.debugPanel && me.plugin.cache.debugPanel.panel.visible) || me.device.touch) {
-            if (typeof this.virtualJoypad === "undefined") {
-                this.virtualJoypad = new VirtualJoypad();
-            }
-            me.game.world.addChild(this.virtualJoypad);
-        }
+        // // display if debugPanel is enabled or on mobile
+        // if ((me.plugin.cache.debugPanel && me.plugin.cache.debugPanel.panel.visible) || me.device.touch) {
+        //     if (typeof this.virtualJoypad === "undefined") {
+        //         this.virtualJoypad = new VirtualJoypad();
+        //     }
+        //     me.game.world.addChild(this.virtualJoypad);
+        // }
 
         // play some music
         me.audio.playTrack("dst-gameforest");
@@ -38,13 +42,13 @@ class PlayScreen extends me.Stage {
      */
     onDestroyEvent() {
 
-        // remove the HUD from the game world
+        //remove the HUD from the game world
         me.game.world.removeChild(this.HUD);
 
-        // remove the joypad if initially added
-        if (this.virtualJoypad && me.game.world.hasChild(this.virtualJoypad)) {
-            me.game.world.removeChild(this.virtualJoypad);
-        }
+        // // remove the joypad if initially added
+        // if (this.virtualJoypad && me.game.world.hasChild(this.virtualJoypad)) {
+        //     me.game.world.removeChild(this.virtualJoypad);
+        // }
 
         // stop some music
         me.audio.stopTrack("dst-gameforest");

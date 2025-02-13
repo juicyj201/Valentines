@@ -6,7 +6,8 @@ var resources = [
      */
     { name: "tileset",         type:"image",   src: "data/img/tileset.png" },
     { name: "background",      type:"image",   src: "data/img/background.png" },
-    { name: "clouds",          type:"image",   src: "data/img/clouds.png" },
+    { name: "cloud1",          type:"image",   src: "data/img/cloud1.png" },
+    { name: "cloud2",          type:"image",   src: "data/img/cloud2.png" },
 
     /* Maps.
      * @example
@@ -14,7 +15,7 @@ var resources = [
      * { name: "example01", type: "tmx", src: "data/map/example01.json" },
      */
     { name: "map1",            type: "tmx",    src: "data/map/map1.tmx" },
-    { name: "map2",            type: "tmx",    src: "data/map/map2.json" },
+    // { name: "map2",            type: "tmx",    src: "data/map/map2.json" },
 
 
     /* Tilesets.
@@ -55,7 +56,26 @@ var resources = [
     * { name: "example_fnt", type: "binary", src: "data/img/example_fnt.fnt" },
     */
     { name: "PressStart2P", type:"image", src: "data/fnt/PressStart2P.png" },
-    { name: "PressStart2P", type:"binary", src: "data/fnt/PressStart2P.fnt"}
+    { name: "PressStart2P", type:"binary", src: "data/fnt/PressStart2P.fnt"},
+
+    //UI HUD
+    { name: "soundOn", type:"image", src: "data/img/assets/UI/shadedDark13.png"},
+    { name: "soundOff", type:"image", src: "data/img/assets/UI/shadedDark15.png"},
+    { name: "fullscreen", type:"image", src: "data/img/assets/UI/shadedDark30.png"},
+
+    // //loading in all walking animations
+    // { name: "walk001", type:"image", src: "data/img/assets/character/walk001.png"},
+    // { name: "walk002", type:"image", src: "data/img/assets/character/walk002.png"},
+    // { name: "walk003", type:"image", src: "data/img/assets/character/walk003.png"},
+    // { name: "walk004", type:"image", src: "data/img/assets/character/walk004.png"},
+    // { name: "walk005", type:"image", src: "data/img/assets/character/walk005.png"},
+    // { name: "walk006", type:"image", src: "data/img/assets/character/walk006.png"},
+    // { name: "walk007", type:"image", src: "data/img/assets/character/walk007.png"},
+    // { name: "walk008", type:"image", src: "data/img/assets/character/walk008.png"},
+    // { name: "walk009", type:"image", src: "data/img/assets/character/walk009.png"},
+    // { name: "walk0010", type:"image", src: "data/img/assets/character/walk0010.png"},
+    // { name: "walk0011", type:"image", src: "data/img/assets/character/walk0011.png"},
+    // { name: "walk0012", type:"image", src: "data/img/assets/character/walk0012.png"},
 ];
 
 export default resources;

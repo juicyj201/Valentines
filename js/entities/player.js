@@ -1,10 +1,16 @@
 import * as me from 'melonjs';
 import game from './../game.js';
 
+// Create a custom entity to manage the animation
 class PlayerEntity extends me.Entity {
     constructor(x, y, settings) {
-        // call the constructor
-        super(x, y , settings);
+        // let width = settings.width;
+
+        //this.settings.image = me.loader.getImage("texture");
+        // settings.framewidth = settings.width = 128;
+        // settings.frameheight = settings.height = 128;
+
+        super(x, y, settings);
 
         // set a "player object" type
         this.body.collisionType = me.collision.types.PLAYER_OBJECT;
@@ -13,6 +19,7 @@ class PlayerEntity extends me.Entity {
         this.alwaysUpdate = true;
 
         // walking & jumping speed
+        //this.body.addShape(new me.Rect(0, 0, this.width, this.height));
         this.body.setMaxVelocity(5, 15);
         this.body.setFriction(0.4, 0);
 
@@ -52,30 +59,55 @@ class PlayerEntity extends me.Entity {
         me.input.bindGamepad(0, {type:"axes", code: me.input.GAMEPAD.AXES.LX, threshold: 0.5}, me.input.KEY.RIGHT);
         me.input.bindGamepad(0, {type:"axes", code: me.input.GAMEPAD.AXES.LY, threshold: -0.5}, me.input.KEY.UP);
 
+        //GAME.TEXTURE (as in the texture variable in game.js) IS DEFINETELY A SPRITE CLASS. DO WHAT YOU WILL WITH THAT INFORMATION
+
         // set a renderable
         this.renderable = game.texture.createAnimationFromName([
-            "walk0001.png", "walk0002.png", "walk0003.png",
-            "walk0004.png", "walk0005.png", "walk0006.png",
-            "walk0007.png", "walk0008.png", "walk0009.png",
-            "walk0010.png", "walk0011.png"
+            "walk001.png", "walk002.png", "walk003.png",
+            "walk004.png", "walk005.png", "walk006.png",
+            "walk007.png", "walk008.png", "walk009.png",
+            "walk0010.png", "walk0011.png", "walk0012.png"
         ]);
 
         // define a basic walking animatin
-        this.renderable.addAnimation("stand", [{ name: "walk0001.png", delay: 100 }]);
-        this.renderable.addAnimation("walk",  [{ name: "walk0001.png", delay: 100 }, { name: "walk0002.png", delay: 100 }, { name: "walk0003.png", delay: 100 }]);
-        this.renderable.addAnimation("jump",  [{ name: "walk0004.png", delay: 150 }, { name: "walk0005.png", delay: 150 }, { name: "walk0006.png", delay: 150 }, { name: "walk0002.png", delay: 150 }, { name: "walk0001.png", delay: 150 }]);
+        this.renderable.addAnimation("stand", [{ name: "walk001.png", delay: 100 }]);
+        this.renderable.addAnimation("walk",  [{ name: "walk001.png", delay: 100 }, { name: "walk002.png", delay: 100 }, { name: "walk003.png", delay: 100 }]);
+        this.renderable.addAnimation("jump",  [{ name: "walk004.png", delay: 150 }, { name: "walk005.png", delay: 150 }, { name: "walk006.png", delay: 150 }, { name: "walk002.png", delay: 150 }, { name: "walk001.png", delay: 150 }]);
 
         // set as default
         this.renderable.setCurrentAnimation("walk");
 
         // set the renderable position to bottom center
         this.anchorPoint.set(0.5, 1.0);
+
+        // // this.frames = [
+        //     me.loader.getImage("walk001"),
+        //     me.loader.getImage("walk002"),
+        //     me.loader.getImage("walk003"),
+        //     me.loader.getImage("walk004"),
+        //     me.loader.getImage("walk005"),
+        //     me.loader.getImage("walk006"),
+        //     me.loader.getImage("walk007"),
+        //     me.loader.getImage("walk008"),
+        //     me.loader.getImage("walk009"),
+        //     me.loader.getImage("walk0010"),
+        //     me.loader.getImage("walk0011"),
+        //     me.loader.getImage("walk0012"),
+        // ];
+
+        // // define a basic walking animatin
+        // //this.renderable.addAnimation("stand", [{ image: frame[0], delay: 100 }]);
+        // this.renderable.addAnimation("stand", [0]);
+        // this.renderable.addAnimation("walk", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+
+        // // set as default
+        // this.renderable.setCurrentAnimation("stand");
+
+        // // set the renderable position to bottom center
+        // this.anchorPoint.set(0.5, 1.0);    
     }
 
-    /**
-     ** update the force applied
-     */
-    update(dt) {
+    update (dt) {
         if (me.input.isKeyPressed("left")){
             if (this.body.vel.y === 0) {
                 this.renderable.setCurrentAnimation("walk");
@@ -136,7 +168,6 @@ class PlayerEntity extends me.Entity {
         }
         return false;
     }
-
 
     /**
      * colision handler
@@ -222,6 +253,6 @@ class PlayerEntity extends me.Entity {
             me.audio.play("die", false);
         }
     }
-};
+}
 
 export default PlayerEntity;
