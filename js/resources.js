@@ -5,9 +5,14 @@ var resources = [
      * { name: "example", type:"image", src: "data/img/example.png" },
      */
     { name: "tileset",         type:"image",   src: "data/img/tileset.png" },
+    { name: "tileset2",         type:"image",   src: "data/img/tileset2.png" },
+    { name: "tileset4",         type:"image",   src: "data/img/tileset4.png" },
+    { name: "tileset5",         type:"image",   src: "data/img/tileset5.png" },
+    { name: "tileset6",         type:"image",   src: "data/img/tileset6.png" },
     { name: "background",      type:"image",   src: "data/img/background.png" },
     { name: "cloud1",          type:"image",   src: "data/img/cloud1.png" },
     { name: "cloud2",          type:"image",   src: "data/img/cloud2.png" },
+    { name: "moon",          type:"image",   src: "data/img/moon.png" },
 
     /* Maps.
      * @example
@@ -24,6 +29,10 @@ var resources = [
      * { name: "example01", type: "tsx", src: "data/map/example01.json" },
      */
     { name: "tileset",         type: "tsx",    src: "data/map/tileset.json" },
+    { name: "tileset2",         type: "tsx",    src: "data/map/tileset2.json" },
+    { name: "tileset4",         type: "tsx",    src: "data/map/tileset4.json" },
+    { name: "tileset5",         type: "tsx",    src: "data/map/tileset5.json" },
+    { name: "tileset6",         type: "tsx",    src: "data/map/tileset6.json" },
 
 
     /* Background music.

@@ -102,7 +102,7 @@ class PlayerEntity extends me.Entity {
         this.renderable.setCurrentAnimation("walk");
 
         // set the renderable position to bottom center
-        this.anchorPoint.set(0.5, 1.0); 
+        this.anchorPoint.set(0, 1.0); 
     }
 
     update (dt) {
