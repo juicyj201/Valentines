@@ -19,9 +19,12 @@ var resources = [
      * { name: "example01", type: "tmx", src: "data/map/example01.json" },
      */
     { name: "map1",            type: "tmx",    src: "data/map/map1.tmx" },
+    { name: "map2",            type: "tmx",    src: "data/map/map2.tmx" },
     { name: "map3",            type: "tmx",    src: "data/map/map3.tmx" },
     { name: "map1",            type: "json",    src: "data/map/map1.json" },
+    { name: "map2",            type: "json",    src: "data/map/map2.json" },
     { name: "map3",            type: "json",    src: "data/map/map3.json" },
+
     // { name: "map2",            type: "tmx",    src: "data/map/map2.json" },
 
 
