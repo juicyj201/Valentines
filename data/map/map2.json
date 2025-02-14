@@ -413,9 +413,54 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "color":"#44c60c",
+         "draworder":"topdown",
+         "id":22,
+         "name":"RoseEntity",
+         "objects":[
+                {
+                 "height":32,
+                 "id":99,
+                 "name":"RoseEntity",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":576,
+                 "y":544
+                }, 
+                {
+                 "height":32,
+                 "id":100,
+                 "name":"RoseEntity",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":736,
+                 "y":384
+                }, 
+                {
+                 "height":32,
+                 "id":102,
+                 "name":"RoseEntity",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":256,
+                 "y":128
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":22,
- "nextobjectid":99,
+ "nextlayerid":23,
+ "nextobjectid":103,
  "orientation":"orthogonal",
  "parallaxoriginx":1,
  "parallaxoriginy":1,

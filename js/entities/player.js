@@ -6,10 +6,6 @@ class PlayerEntity extends me.Entity {
     constructor(x, y, settings) {
         // let width = settings.width;
 
-        //this.settings.image = me.loader.getImage("texture");
-        // settings.framewidth = settings.width = 128;
-        // settings.frameheight = settings.height = 128;
-
         super(x, y, settings);
 
         // set a "player object" type
@@ -155,9 +151,11 @@ class PlayerEntity extends me.Entity {
             this.dying = true;
             me.game.world.removeChild(this);
             me.game.viewport.fadeIn("#fff", 150, function(){
+                //this.hurt();
                 me.audio.play("die", false);
                 me.level.reload();
                 me.game.viewport.fadeOut("#fff", 150);
+                game.data.score = 0;
             });
             return true;
         }
@@ -207,25 +205,25 @@ class PlayerEntity extends me.Entity {
                 }
                 break;
 
-            case me.collision.types.ENEMY_OBJECT:
-                if (!other.isMovingEnemy) {
-                    // spike or any other fixed danger
-                    this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
-                    this.hurt();
-                }
-                else {
-                    // a regular moving enemy entity
-                    if ((response.overlapV.y > 0) && this.body.falling) {
-                        // jump
-                        this.body.vel.y -= this.body.maxVel.y * 1.5 * me.timer.tick;
-                    }
-                    else {
-                        this.hurt();
-                    }
-                    // Not solid
-                    return false;
-                }
-                break;
+            // case me.collision.types.ENEMY_OBJECT:
+            //     if (!other.isMovingEnemy) {
+            //         // spike or any other fixed danger
+            //         this.body.vel.y -= this.body.maxVel.y * me.timer.tick;
+            //         this.hurt();
+            //     }
+            //     else {
+            //         // a regular moving enemy entity
+            //         if ((response.overlapV.y > 0) && this.body.falling) {
+            //             // jump
+            //             this.body.vel.y -= this.body.maxVel.y * 1.5 * me.timer.tick;
+            //         }
+            //         else {
+            //             this.hurt();
+            //         }
+            //         // Not solid
+            //         return false;
+            //     }
+            //     break;
 
             default:
                 // Do not respond to other objects (e.g. coins)
@@ -254,6 +252,8 @@ class PlayerEntity extends me.Entity {
             // flash the screen
             me.game.viewport.fadeIn("#FFFFFF", 75);
             me.audio.play("die", false);
+            me.level.reload();
+            game.data.score = 0;            
         }
     }
 }

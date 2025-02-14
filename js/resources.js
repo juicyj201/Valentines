@@ -21,9 +21,13 @@ var resources = [
     { name: "map1",            type: "tmx",    src: "data/map/map1.tmx" },
     { name: "map2",            type: "tmx",    src: "data/map/map2.tmx" },
     { name: "map3",            type: "tmx",    src: "data/map/map3.tmx" },
+    { name: "map4",            type: "tmx",    src: "data/map/map4.tmx" },
+    { name: "map5",            type: "tmx",    src: "data/map/map5.tmx" },
     { name: "map1",            type: "json",    src: "data/map/map1.json" },
     { name: "map2",            type: "json",    src: "data/map/map2.json" },
     { name: "map3",            type: "json",    src: "data/map/map3.json" },
+    { name: "map4",            type: "json",    src: "data/map/map4.json" },
+    { name: "map5",            type: "json",    src: "data/map/map5.json" },
 
     // { name: "map2",            type: "tmx",    src: "data/map/map2.json" },
 

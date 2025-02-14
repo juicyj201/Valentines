@@ -410,25 +410,36 @@
          "objects":[
                 {
                  "height":32,
-                 "id":127,
+                 "id":129,
                  "name":"RoseEntity",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":800,
+                 "x":832,
                  "y":512
                 }, 
                 {
                  "height":32,
-                 "id":128,
+                 "id":130,
                  "name":"RoseEntity",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":896,
-                 "y":512
+                 "x":1728,
+                 "y":64
+                }, 
+                {
+                 "height":32,
+                 "id":131,
+                 "name":"RoseEntity",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1600,
+                 "y":160
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -437,7 +448,7 @@
          "y":0
         }],
  "nextlayerid":24,
- "nextobjectid":129,
+ "nextobjectid":132,
  "orientation":"orthogonal",
  "parallaxoriginx":1,
  "parallaxoriginy":1,
