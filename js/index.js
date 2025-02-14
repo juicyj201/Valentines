@@ -3,6 +3,7 @@ import * as me from 'melonjs';
 import game from './game.js';
 import resources from './resources.js';
 import PlayerEntity from './entities/player.js';
+import { SlimeEnemyEntity } from './entities/enemies.js';
 import PlayScreen from './screens/play.js';
 import { DebugPanelPlugin } from "debugPlugin";
 
@@ -13,8 +14,8 @@ import { DebugPanelPlugin } from "debugPlugin";
 export default function onload() {
 
     // init the video
-    //scaleMethod : "flex-width", depthTest: "z-buffer", subPixel : false, preferWebGL1 : false
-    if (!me.video.init(800, 600, {parent : "screen", scale: "auto", renderer : me.video.WEBGL})) {
+    //scaleMethod : "flex-width", depthTest: "z-buffer", subPixel : false, preferWebGL1 : false, renderer : me.video.WEBGL
+    if (!me.video.init(800, 600, {parent : "screen", scale: "auto"})) {
         alert("Your browser does not support HTML5 canvas.");
         return;
     }
@@ -39,7 +40,7 @@ export default function onload() {
 
         // register our objects entity in the object pool
         me.pool.register("mainPlayer", PlayerEntity);
-        // me.pool.register("SlimeEntity", SlimeEnemyEntity);
+        //me.pool.register("SlimeEntity", SlimeEnemyEntity);
         // me.pool.register("FlyEntity", FlyEnemyEntity);
         // me.pool.register("CoinEntity", CoinEntity, true);
 

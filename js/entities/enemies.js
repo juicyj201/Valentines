@@ -10,7 +10,6 @@ class PathEnemyEntity extends me.Entity {
      * constructor
      */
     constructor(x, y, settings) {
-
         // save the area size defined in Tiled
         var width = settings.width || settings.framewidth;
 
@@ -18,12 +17,15 @@ class PathEnemyEntity extends me.Entity {
         settings.width = settings.framewidth;
         settings.height = settings.frameheight;
 
+        settings.spritewidth = 128;
+        settings.spriteheight  = 128;
+
         // redefine the default shape (used to define path) with a shape matching the renderable
-        settings.shapes[0] = new me.Rect(0, 0, settings.framewidth, settings.frameheight);
+        //settings.shapes[0] = new me.Rect(0.0, 0.0, settings.framewidth, settings.frameheight);
 
         // call the super constructor
         super(x, y, settings);
-
+        
         // set start/end position based on the initial area size
         x = this.pos.x;
         this.startX = x;
@@ -140,7 +142,13 @@ export class SlimeEnemyEntity extends PathEnemyEntity {
 
         // set a renderable
         this.renderable = game.texture.createAnimationFromName([
-            "slime_normal.png", "slime_walk.png", "slime_dead.png"
+            "slimewalk000.png", "slimewalk001.png", "slimewalk002.png", "slimewalk003.png",
+            "slimewalk004.png", "slimewalk005.png", "slimewalk006.png",
+            "slimewalk007.png",
+            "slimeidle000.png", "slimeidle001.png", "slimeidle002.png", "slimeidle003.png",
+            "slimeidle004.png", "slimeidle005.png", "slimeidle006.png",
+            "slimeidle007.png",
+            "slimedead000.png", "slimedead001.png", "slimedead002.png", 
         ]);
 
         // custom animation speed ?
@@ -149,57 +157,40 @@ export class SlimeEnemyEntity extends PathEnemyEntity {
         }
 
         // walking animatin
-        this.renderable.addAnimation ("walk", ["slime_normal.png", "slime_walk.png"]);
+        this.renderable.addAnimation ("walk", [
+            { name: "slimewalk000.png", delay: 50 },
+            { name: "slimewalk001.png", delay: 50 }, 
+            { name: "slimewalk002.png", delay: 50 }, 
+            { name: "slimewalk003.png", delay: 50 },
+            { name: "slimewalk004.png", delay: 50 },
+            { name: "slimewalk005.png", delay: 50 },
+            { name: "slimewalk006.png", delay: 50 },
+            { name: "slimewalk007.png", delay: 50 }]);
+
+        this.renderable.addAnimation("stand", [
+            { name: "slimeidle000.png", delay: 50 },
+            { name: "slimeidle001.png", delay: 50 }, 
+            { name: "slimeidle002.png", delay: 50 }, 
+            { name: "slimeidle003.png", delay: 50 },
+            { name: "slimeidle004.png", delay: 50 },
+            { name: "slimeidle005.png", delay: 50 },
+            { name: "slimeidle006.png", delay: 50 },
+            { name: "slimeidle007.png", delay: 50 }]);
+
         // dead animatin
-        this.renderable.addAnimation ("dead", ["slime_dead.png"]);
+        this.renderable.addAnimation ("dead", [
+            { name: "slimedead000.png", delay: 50 },
+            { name: "slimedead001.png", delay: 50 }, 
+            { name: "slimedead002.png", delay: 50 }]);
 
         // set default one
         this.renderable.setCurrentAnimation("walk");
 
         // set the renderable position to bottom center
-        this.anchorPoint.set(0.5, 1.0);
+        this.anchorPoint.set(0.25, 0.5); 
 
         // particle tint matching the sprite color
         this.particleTint = "#FF35B8";
-
-    }
-};
-
-/**
- * An Fly enemy entity
- * follow a horizontal path defined by the box size in Tiled
- */
-export class FlyEnemyEntity extends PathEnemyEntity {
-    /**
-     * constructor
-     */
-    constructor(x, y, settings) {
-        // super constructor
-        super(x, y, settings);
-
-        // set a renderable
-        this.renderable = game.texture.createAnimationFromName([
-            "fly_normal.png", "fly_fly.png", "fly_dead.png"
-        ]);
-
-        // custom animation speed ?
-        if (settings.animationspeed) {
-            this.renderable.animationspeed = settings.animationspeed;
-        }
-
-        // walking animatin
-        this.renderable.addAnimation ("walk", ["fly_normal.png", "fly_fly.png"]);
-        // dead animatin
-        this.renderable.addAnimation ("dead", ["fly_dead.png"]);
-
-        // set default one
-        this.renderable.setCurrentAnimation("walk");
-
-        // set the renderable position to bottom center
-        this.anchorPoint.set(0.5, 1.0);
-
-        // particle tint matching the sprite color
-        this.particleTint = "#000000";
 
     }
 };

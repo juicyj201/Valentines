@@ -138,6 +138,7 @@ class PlayerEntity extends me.Entity {
             if (!this.body.falling && !this.body.jumping) {
                 // reset the multipleJump flag if on the ground
                 this.multipleJump = 1;
+                this.renderable.setCurrentAnimation("stand");
             }
             else if (this.body.falling && this.multipleJump < 2) {
                 // reset the multipleJump flag if falling
@@ -254,7 +255,6 @@ class PlayerEntity extends me.Entity {
             // flash the screen
             me.game.viewport.fadeIn("#FFFFFF", 75);
             me.audio.play("die", false);
-            this.dying = true;
         }
     }
 }
