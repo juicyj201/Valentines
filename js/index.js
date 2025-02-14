@@ -4,6 +4,7 @@ import game from './game.js';
 import resources from './resources.js';
 import PlayerEntity from './entities/player.js';
 import { SlimeEnemyEntity } from './entities/enemies.js';
+import { RoseEntity } from './entities/coin.js';
 import PlayScreen from './screens/play.js';
 import { DebugPanelPlugin } from "debugPlugin";
 
@@ -42,7 +43,7 @@ export default function onload() {
         me.pool.register("mainPlayer", PlayerEntity);
         //me.pool.register("SlimeEntity", SlimeEnemyEntity);
         // me.pool.register("FlyEntity", FlyEnemyEntity);
-        // me.pool.register("CoinEntity", CoinEntity, true);
+        me.pool.register("RoseEntity", RoseEntity, true);
 
         game.texture = new me.TextureAtlas(
             me.loader.getJSON("texture"),

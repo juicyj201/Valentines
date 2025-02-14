@@ -39,7 +39,7 @@
    <properties>
     <property name="color" value="#fff"/>
     <property name="duration" value="150"/>
-    <property name="to" value="map4"/>
+    <property name="to" value="map3"/>
    </properties>
   </object>
   <object id="93" name="mainPlayer" x="1" y="320" width="46" height="128"/>
@@ -76,10 +76,10 @@
   <object id="94" x="832" y="128" width="128" height="32"/>
   <object id="95" x="864" y="160" width="96" height="32"/>
   <object id="96" x="0" y="448">
-   <polyline points="0,0 0,-448"/>
+   <polyline points="0,192 0,-448"/>
   </object>
   <object id="97" x="960" y="128">
-   <polyline points="0,0 0,-128"/>
+   <polyline points="0,512 0,-128"/>
   </object>
  </objectgroup>
 </map>

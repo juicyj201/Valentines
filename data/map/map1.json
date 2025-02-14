@@ -137,7 +137,7 @@
                         {
                          "name":"to",
                          "type":"string",
-                         "value":"map3"
+                         "value":"map2"
                         }],
                  "rotation":0,
                  "type":"",
@@ -217,7 +217,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":0
+                         "y":224
                         }, 
                         {
                          "x":0,

@@ -40,7 +40,7 @@
    <properties>
     <property name="color" value="#fff"/>
     <property name="duration" value="150"/>
-    <property name="to" value="map3"/>
+    <property name="to" value="map2"/>
    </properties>
   </object>
  </objectgroup>
@@ -52,7 +52,7 @@
   </object>
   <object id="47" x="0" y="608" width="320" height="32"/>
   <object id="68" x="960" y="416">
-   <polyline points="0,0 0,-416"/>
+   <polyline points="0,224 0,-416"/>
   </object>
   <object id="73" type="platform" x="512" y="512">
    <polyline points="0,0 32,0"/>
