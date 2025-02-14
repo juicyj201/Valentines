@@ -30,6 +30,7 @@
          "image":"..\/img\/cloud1.png",
          "imageheight":324,
          "imagewidth":576,
+         "locked":true,
          "name":"Clouds4",
          "offsetx":352,
          "offsety":320,
@@ -50,6 +51,7 @@
          "image":"..\/img\/cloud2.png",
          "imageheight":324,
          "imagewidth":576,
+         "locked":true,
          "name":"Clouds3",
          "offsetx":0,
          "offsety":320,
@@ -70,6 +72,7 @@
          "image":"..\/img\/cloud2.png",
          "imageheight":324,
          "imagewidth":576,
+         "locked":true,
          "name":"Clouds5",
          "offsetx":928,
          "offsety":320,
@@ -91,6 +94,7 @@
          "encoding":"base64",
          "height":20,
          "id":13,
+         "locked":true,
          "name":"Tile Layer Shadow",
          "opacity":1,
          "type":"tilelayer",
@@ -105,6 +109,7 @@
          "encoding":"base64",
          "height":20,
          "id":1,
+         "locked":true,
          "name":"Tile Layer 1",
          "opacity":1,
          "properties":[
@@ -123,7 +128,6 @@
          "color":"#00ff00",
          "draworder":"topdown",
          "id":9,
-         "locked":true,
          "name":"mainPlayer",
          "objects":[
                 {
@@ -136,6 +140,33 @@
                  "width":46,
                  "x":1,
                  "y":96
+                }, 
+                {
+                 "height":96,
+                 "id":161,
+                 "name":"me.Trigger",
+                 "properties":[
+                        {
+                         "name":"color",
+                         "type":"string",
+                         "value":"#fff"
+                        }, 
+                        {
+                         "name":"duration",
+                         "type":"string",
+                         "value":"150"
+                        }, 
+                        {
+                         "name":"to",
+                         "type":"string",
+                         "value":"map6"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":895,
+                 "y":448
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -146,6 +177,7 @@
         {
          "draworder":"index",
          "id":8,
+         "locked":true,
          "name":"Collisions",
          "objects":[
                 {
@@ -231,6 +263,7 @@
          "color":"#507828",
          "draworder":"topdown",
          "id":23,
+         "locked":true,
          "name":"RoseEntity",
          "objects":[],
          "opacity":1,
@@ -240,21 +273,29 @@
          "y":0
         }, 
         {
-         "color":"#900265",
          "draworder":"topdown",
-         "id":24,
-         "name":"ValentineEntity",
+         "id":25,
+         "name":"Text",
          "objects":[
                 {
-                 "height":96,
-                 "id":156,
-                 "name":"ValentineEntity",
+                 "height":100,
+                 "id":160,
+                 "name":"",
                  "rotation":0,
+                 "text":
+                    {
+                     "color":"#550000",
+                     "fontfamily":"OCR A",
+                     "halign":"center",
+                     "pixelsize":32,
+                     "text":"Hey, bby gurl. Come this way ->",
+                     "wrap":true
+                    },
                  "type":"",
                  "visible":true,
-                 "width":64,
-                 "x":672,
-                 "y":448
+                 "width":380,
+                 "x":509,
+                 "y":447
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -262,8 +303,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":25,
- "nextobjectid":160,
+ "nextlayerid":28,
+ "nextobjectid":162,
  "orientation":"orthogonal",
  "parallaxoriginx":1,
  "parallaxoriginy":1,

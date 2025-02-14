@@ -138,6 +138,7 @@ class ScoreItem extends me.BitmapText {
     }
 };
 
+
 /**
  * a HUD container and child items
  */

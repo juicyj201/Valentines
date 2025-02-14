@@ -5,7 +5,6 @@ import resources from './resources.js';
 import PlayerEntity from './entities/player.js';
 import { SlimeEnemyEntity } from './entities/enemies.js';
 import { RoseEntity } from './entities/coin.js';
-import {ValentineEntity} from './entities/valentine.js';
 import PlayScreen from './screens/play.js';
 import { DebugPanelPlugin } from "debugPlugin";
 
@@ -45,7 +44,6 @@ export default function onload() {
         //me.pool.register("SlimeEntity", SlimeEnemyEntity);
         // me.pool.register("FlyEntity", FlyEnemyEntity);
         me.pool.register("RoseEntity", RoseEntity, true);
-        me.pool.register("ValentineEntity", ValentineEntity);
 
         game.texture = new me.TextureAtlas(
             me.loader.getJSON("texture"),
